@@ -28,7 +28,7 @@ h3 {
 }
 
 a {
-    color: darkmagenta;
+    color: #992196;
     transition: 0.3s;
     text-decoration: none;
 }
@@ -44,7 +44,6 @@ a:hover {
 
 .innerbox h3 a {
     display: block;
-    color: darkmagenta;
     border-radius: 5px;
     font-weight: 600;
 }
@@ -259,4 +258,8 @@ li {
 
 .navUL {
     padding-left: 1em;
+}
+
+.legende .titre {
+    font-style: italic
 }
