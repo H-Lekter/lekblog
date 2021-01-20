@@ -17,6 +17,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+    text-align: center;
     font-size: 2.5em;
 }
 h2 {
@@ -37,13 +38,17 @@ a:hover {
     text-decoration: underline;
 }
 
-.cadre h3 a {
+.nav a:hover {
+    text-decoration: none
+}
+
+.innerbox h3 a {
     display: block;
     color: darkmagenta;
     border-radius: 5px;
     font-weight: 600;
 }
-.cadre h3 a:hover {
+.innerbox h3 a:hover {
     color: white;
     background-color: rgba(51, 17, 68, .1);
     text-shadow: 0 0 6px black;
@@ -52,27 +57,84 @@ a:hover {
 
 img {
     animation: colorize 2s cubic-bezier(0, 0, .78, .36) 1;
-    background: transparent;
-    border: 10px solid rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
+    border-radius: 3px;
     display: block;
     margin: 1.3em auto;
     max-width: 95%;
 }
 
 .content {
-    background: #fff;
+    background: white;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
     color: #545454;
     font-size: 16px;
     line-height: 1.5;
-    padding: 2em 2em 4em;
+    padding: 1em 2em 1em;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.cadre {
+
+
+.show-menu {
+  cursor: pointer;
+}
+
+input.checkbox-menu[type="checkbox"] {
+  display: none;
+  -webkit-appearance: none;
+}
+
+input.checkbox-menu[type="checkbox"]:checked ~ div.menu-block {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-icon {
+  display: inline-block;
+  font-size: 1.5em;
+  padding: 0 0.5em;
+  vertical-align: middle;
+}
+
+.menu-block {
+  display: inline-block;
+  opacity: 0;
+  vertical-align: middle;
+  visibility: hidden;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.grid-container ul, .tagzone ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+ul.navUL li a {
+    display: inline-block;
+    padding: 0px 5px;
+    color: #999;
+    padding: 4px;
+    text-decoration: none;
+}
+
+ul.navUL li a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+
+
+
+.innerbox {
     padding: 0.7em;
     background-color: white;
     border-radius: 3px;
@@ -93,6 +155,9 @@ img {
     text-align: center;
 }
 
+.innerbox h3 {
+    text-align: center;
+}
 .cadre h3 {
     text-align: center;
 }
@@ -107,8 +172,91 @@ img {
     background-color: white
 }
 
-.wobble ul {
+.cadre ul, .wobble ul {
     display: block;
     margin-left: auto;
     margin-right: auto; 
+}
+.cadre ul {
+    margin-bottom: 0.5rem;
+}
+
+.legende {
+    display: block;
+    text-align: center;
+}
+
+
+
+.annotation {
+    font-size: 70%;
+    margin-top: 3rem;
+}
+
+.cadre {
+    background-color: #f6fbff;
+    border: 1px solid #0056a5;
+    border-radius: 3px;
+    max-width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.fond {
+    margin: 4rem auto 2.5rem auto;
+}
+
+.nav {
+    transform: rotate(90deg);
+    background-color: white;
+    border: 1px solid;
+    box-shadow: 2px 2px 3px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 250px;
+}
+
+.fa {
+    font-size: 3rem;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    -webkit-font-smoothing: antialiased;
+    transform: translate(0, 0);
+}
+
+nav {
+    margin-bottom: 1em;
+}
+
+.tag {
+    padding: 0.3em max(0.5em, 10px);
+    border: 1px solid;
+    border-radius: 20px;
+    color: white;
+    background-color: darkmagenta;
+    transition: 0.6s;
+}
+
+.tag:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #331144;
+    text-decoration: none;
+}
+
+ul.tag {
+    list-style: none;
+}
+
+li {
+    display: inline-flex;
+}
+
+.trois {
+    
+}
+
+.navUL {
+    padding-left: 1em;
 }
