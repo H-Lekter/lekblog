@@ -67,7 +67,8 @@ img {
     background: white;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
     color: #545454;
-    font-size: 16px;
+    /* font-size: 16px; */
+    font-size: 1em;
     line-height: 1.5;
     padding: 1em 2em 1em;
     max-width: 800px;
@@ -75,7 +76,9 @@ img {
     margin-right: auto;
 }
 
-
+li {
+    display: list-item;
+}
 
 .show-menu {
   cursor: pointer;
@@ -110,14 +113,6 @@ input.checkbox-menu[type="checkbox"]:checked ~ div.menu-block {
   transition: all 0.25s;
 }
 
-.grid-container ul, .tagzone ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-
-
 ul.navUL li a {
     display: inline-block;
     padding: 0px 5px;
@@ -131,7 +126,19 @@ ul.navUL li a:hover {
   text-decoration: none;
 }
 
+nav li {
+    display: inline-flex;
+}
 
+.navUL {
+    padding-left: 1em;
+}
+
+.grid-container ul, .tagzone ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
 
 .innerbox {
@@ -249,18 +256,32 @@ ul.tag {
     list-style: none;
 }
 
-li {
-    display: inline-flex;
-}
-
-.trois {
-    
-}
-
-.navUL {
-    padding-left: 1em;
-}
-
 .legende .titre {
     font-style: italic
+}
+
+/* -------------- AJUSTEMENTS MOBILE -------------- */
+
+@media only screen and (max-width: 767px) {
+    
+    .fa {
+        font: normal normal normal 75px/1 FontAwesome;
+    }
+    
+    html, body {
+        background-color: white;
+    }
+    
+    .content {
+        background: white;
+        box-shadow: 0 0 transparent;
+        padding: 1em 2em 1em;
+        max-width: 890px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .wobble ul {
+        max-width: 50vw;
+    }
 }
